@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <title>Brooklyn Height Walking Tour - NYC Space/Time Directory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js" integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg==" crossorigin=""></script>
-    <link rel="stylesheet" href="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.css" />
-    <script src="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js" ></script>
+    <link rel="stylesheet" href="css/L.Control.Locate.min.css" />
+    <script src="js/L.Control.Locate.min.js" charset="utf-8"></script>
+    <script src="js/d3.v4.min.js"></script>
     <style>
       body {
         margin: 0;
@@ -30,11 +30,12 @@
         height: 100%;
       }
 
-       #slider-container {
+      #slider-container {
         border-width: 2px;
         border-color: rgba(0, 0, 0, 0.5);
         border-style: solid;
         width: 30%;
+        box-sizing: border-box;
         left: calc(50% - 15%);
         z-index: 9999;
         position: absolute;
@@ -56,6 +57,13 @@
         text-align: right;
         width: 4.5em;
       }
+
+      @media (max-width: 1000px) {
+        #slider-container {
+          width: 95%;
+          left: 2.5%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -67,7 +75,6 @@
       <div id="slider-container">
         <label for="slider">Opacity:</label>
         <input id="slider" type="range" min="1" max="100" step="1" value="100">
-        <span id="opacity"></span>
       </div>
     </article>
     <script>
@@ -155,11 +162,9 @@
       })
 
       var slider = document.getElementById('slider')
-      var opacityText = document.getElementById('opacity')
 
       function updateAngle() {
         var opacity = slider.value / 100
-        opacityText.innerHTML = slider.value + '%'
         mapwarperLayers.forEach(function (layer) {
           layer.setOpacity(opacity)
         })
