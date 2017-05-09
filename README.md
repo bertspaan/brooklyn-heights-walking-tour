@@ -3,7 +3,7 @@
 - https://www.meetup.com/historical-data-and-maps-at-nypl/
 - https://www.meetup.com/historical-data-and-maps-at-nypl/events/239455247/
 
-__View [interactive map](http://spacetime.nypl.org/brooklyn-heights-walking-tour)!__
+__View [interactive map](https://brooklyn-heights-walking-tour.netlify.com/)!__
 
 ## Route
 
