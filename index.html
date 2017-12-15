@@ -163,18 +163,18 @@
 
       var slider = document.getElementById('slider')
 
-      function updateAngle() {
+      function updateOpacity() {
         var opacity = slider.value / 100
         mapwarperLayers.forEach(function (layer) {
           layer.setOpacity(opacity)
         })
       }
 
-      slider.addEventListener('input', updateAngle)
+      slider.addEventListener('input', updateOpacity)
       // In IE<=11, input event does not work
-      slider.addEventListener('change', updateAngle)
+      slider.addEventListener('change', updateOpacity)
 
-      updateAngle()
+      updateOpacity()
     </script>
   </body>
 </html>

@@ -1,7 +1,8 @@
 # Brooklyn Heights Walking Tour
 
-- https://www.meetup.com/historical-data-and-maps-at-nypl/
-- https://www.meetup.com/historical-data-and-maps-at-nypl/events/239455247/
+Wednesday, May 10, 2017, 6:30 PM - a walking tour through Brooklyn Heights, guided by Brooklyn Heights historian [Jeremy Lechtzin](https://twitter.com/jeremylechtzin). Part of [Historical Data & Maps at NYPL](https://www.meetup.com/historical-data-and-maps-at-nypl/), the meetup series of the [NYC Space/Time Directory](http://spacetime.nypl.org) project.
+
+For more information about the event, see [meetup.com](https://www.meetup.com/historical-data-and-maps-at-nypl/events/239455247/).
 
 __View [interactive map](https://brooklyn-heights-walking-tour.netlify.com/)!__
 
